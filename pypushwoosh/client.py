@@ -40,7 +40,7 @@ class PushwooshClient(PushwooshBaseClient):
         self.connection.request('POST', self.path(command), command.render(), self.headers)
         response = self.connection.getresponse()
 
-        if self.debug:
+        if True:
             log.debug('Response version: %s' % response.version)
             log.debug('Response code: %s' % response.status)
             log.debug('Response phrase: %s' % response.reason)
